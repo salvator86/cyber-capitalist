@@ -16,6 +16,7 @@ export class BusinessComponent implements OnInit {
   styleActive: string = '';
   availableBlock: string = '';
   count: number;
+  disabledButtonBuy: boolean = true;
 
   constructor(private pointManagerService: PointManagerService) { }
 
@@ -23,6 +24,9 @@ export class BusinessComponent implements OnInit {
     this.pointManagerService.current.subscribe(value => {
       this.time = this.business.time;
       this.currentSum = value;
+      if (value > this.business.available) {
+        this.disabledButtonBuy = false;
+      }
     });
   }
 
@@ -33,19 +37,27 @@ export class BusinessComponent implements OnInit {
     }
   }
 
-  earn() {
+  earn(loading: HTMLDivElement) {
     this.count = this.time;
+    let tik: number;
+    if (this.time !== 0) {
+      tik = 100 / (this.time/1000) / 40;
+    } else {
+      tik = 100;
+    }
     if (this.business.sold) {
       this.active = true;
       this.styleActive = 'business-earn-active'
       const intervalDuration = setInterval(() => {
-        this.count = this.count - 1000;
-      }, 1000)
+        this.count = this.count - 25;
+        loading.style.width = (+loading.style.width.slice(0, -1) + +tik).toString() + '%';
+      }, 25)
       setTimeout(async () => {
         await clearInterval(intervalDuration)
         this.active = false;
         this.styleActive = '';
         this.time = this.business.time;
+        loading.style.width = ''
         this.pointManagerService.increaseCurrent(this.currentSum + this.business.startPrice)
       }, this.business.time)
     }

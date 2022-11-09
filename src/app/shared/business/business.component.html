@@ -1,13 +1,26 @@
 <div class="business-block {{availableBlock}}">
-  <button [disabled]="active" (click)="earn()" class="business-earn {{styleActive}}"></button>
+  <ng-container *ngIf="!business.sold">
+    <div class="buy-business-block">
+      <div class="buy-business-elements">
+        <p>buy it for {{business.available}}</p>
+        <button [disabled]="disabledButtonBuy" (click)="buyBusiness()">buy</button>
+      </div>
+    </div>
+  </ng-container>
+  <button [disabled]="active" (click)="earn(loading)" class="business-earn {{styleActive}}"></button>
   <div class="business-info">
     <div class="business-info-earn">
-      <p>{{business.startPrice}}</p>
+      <div class="green" #loading></div>
+      <p>{{business.startPrice | number: '1.0-2'}}</p>
     </div>
     <div class="business-info-improve">
-      <button (click)="increaseBusinessEarn()">{{business.cost}}</button>
-      <div>{{count / 1000}}</div>
+      <button (click)="increaseBusinessEarn()">Buy x1 {{business.cost}}</button>
+      <div *ngIf="count; else showTime">
+        <div>{{count / 1000 | number: '1.0-0'}}</div>
+      </div>
+      <ng-template #showTime>
+        <div>{{time / 1000 | number: '1.0-0'}}</div>
+      </ng-template>
     </div>
   </div>
-  <button (click)="buyBusiness()">buy it for {{business.available}}, you have {{currentSum}}</button>
 </div>
