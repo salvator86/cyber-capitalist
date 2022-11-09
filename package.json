@@ -1,6 +1,7 @@
 {
   "name": "cyber-capitalist",
   "version": "0.0.0",
+  "homepage": "https://salvator86.github.io/cyber-capitalist/game",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
