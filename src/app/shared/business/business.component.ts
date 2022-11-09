@@ -15,6 +15,7 @@ export class BusinessComponent implements OnInit {
   active: boolean = false;
   styleActive: string = '';
   availableBlock: string = '';
+  count: number;
 
   constructor(private pointManagerService: PointManagerService) { }
 
@@ -33,14 +34,15 @@ export class BusinessComponent implements OnInit {
   }
 
   earn() {
+    this.count = this.time;
     if (this.business.sold) {
       this.active = true;
       this.styleActive = 'business-earn-active'
       const intervalDuration = setInterval(() => {
-        this.time = this.time - 1000;
+        this.count = this.count - 1000;
       }, 1000)
-      setTimeout(() => {
-        clearInterval(intervalDuration)
+      setTimeout(async () => {
+        await clearInterval(intervalDuration)
         this.active = false;
         this.styleActive = '';
         this.time = this.business.time;
