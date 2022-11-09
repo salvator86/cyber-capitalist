@@ -1,0 +1,25 @@
+.business-block {
+  display: flex;
+  margin: 5px;
+  .business-earn {
+    width: 100px;
+    height: 100px;
+    background: #676060;
+    border-radius: 50%;
+  }
+  .business-earn-active {
+    background: blue;
+  }
+  .business-info {
+    .business-info-earn {
+      width: 200px;
+      height: 50px;
+      color: white;
+      background: #00a654;
+    }
+    .business-info-improve {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

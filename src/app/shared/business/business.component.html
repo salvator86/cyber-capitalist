@@ -1,0 +1,13 @@
+<div class="business-block {{availableBlock}}">
+  <button [disabled]="active" (click)="earn()" class="business-earn {{styleActive}}"></button>
+  <div class="business-info">
+    <div class="business-info-earn">
+      <p>{{business.startPrice}}</p>
+    </div>
+    <div class="business-info-improve">
+      <button (click)="increaseBusinessEarn()">{{business.cost}}</button>
+      <div>{{time / 1000}}</div>
+    </div>
+  </div>
+  <button (click)="buyBusiness()">buy</button>
+</div>
