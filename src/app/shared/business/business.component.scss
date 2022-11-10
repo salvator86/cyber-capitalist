@@ -1,10 +1,11 @@
 .business-block {
   display: flex;
-  justify-content: space-around;
   position: relative;
   width: 300px;
-  margin: 30px auto;
-  align-items: center;
+  margin: {
+    top: 25px;
+    left: 20px;
+  }
   .buy-business-block {
     position: absolute;
     width: 100%;
@@ -29,41 +30,97 @@
     }
   }
   .business-earn {
-    width: 100px;
-    height: 100px;
-    background: #676060;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  .business-earn-active {
-    background: blue;
+    width: 95px;
+    height: 95px;
+    background: none;
+    border: none;
+    .business-earn-icon {
+      width: 95px;
+      height: 95px;
+    }
   }
   .business-info {
-    .business-info-earn {
-      position: relative;
-      width: 180px;
-      height: 30px;
-      border: 2px solid white;
-      border-radius: 10px;
-      background: gray;
-      .green {
-        width: 0;
-        background: #18EE7F;
-        border-radius: 10px;
-        height: 100%;
-        position: absolute;
-      }
-      p {
-        position: absolute;
-        z-index: 1;
-        color: black;
-        left: 65px;
-        bottom: -10px;
-      }
-    }
-    .business-info-improve {
+    height: 80px;
+    margin-left: 10px;
+    .business-info-position {
+      position: absolute;
+      bottom: 0;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+      &:after {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top:  -1px;
+        border-top: 10px solid #FBDA42;
+        border-left: 10px solid transparent;
+      }
+      &:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        color: white;
+        position: absolute;
+        right: 3px;
+        top: 2px;
+        border-top: 2px solid white;
+        rotate: 45deg;
+        z-index: 1;
+      }
+      .business-info-earn {
+        position: relative;
+        width: 160px;
+        height: 30px;
+        border: 2px solid white;
+        background: gray;
+        .green {
+          width: 0;
+          background: #18EE7F;
+          height: 100%;
+          position: absolute;
+        }
+        p {
+          position: absolute;
+          z-index: 1;
+          color: black;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%)
+        }
+      }
+      .business-info-improve {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7px;
+        .business-info-improve-button {
+          color: white;
+          background: url("../../../assets/ButtonBuy.png");
+          background-size: cover;
+          border: none;
+          width: 120px;
+          height: 36px;
+          transition: .1s;
+          &:disabled {
+            opacity: .5;
+          }
+        }
+        .business-info-improve-sec-block {
+          background: url("../../../assets/Seconds.png");
+          border: none;
+          background-size: cover;
+          width: 40px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          .business-info-improve-sec {
+            margin: 0 auto;
+            color: white;
+          }
+        }
+
+      }
     }
   }
 }

@@ -1,6 +1,56 @@
-.start-screen-button {
-  width: 100px;
-  height: 100px;
-  background-image: url("../../../assets/ton_symbol.png");
-  background-size: cover;
+.splash-screen {
+  background: #FBDA42;
+  height: 100vh;
+  position: relative;
+  .splash-screen-manage-block {
+    position: absolute;
+    max-width: 390px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    .splash-screen-texts {
+      position: relative;
+      .splash-screen-text {
+        position: absolute;
+        bottom: 4px;
+        text-align: center;
+        font: {
+          size: 44px;
+        }
+        z-index: 1;
+      }
+      .splash-screen-text-transparent {
+        text-align: center;
+        font: {
+          size: 44px;
+        }
+        color: #FBDA42;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+    }
+  }
+  .start-screen-button {
+    background: none;
+    display: block;
+    position: absolute;
+    border: none;
+    top: 68%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    .start-screen-button-image {
+      width: 70px;
+      height: 70px;
+      background-size: cover;
+    }
+  }
+  .splash-screen-back {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 84%;
+    object-fit: fill;
+  }
 }
+

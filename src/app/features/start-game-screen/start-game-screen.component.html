@@ -1,8 +1,4 @@
 <div class="start-game-block">
-  <div class="current-money-block">
-    <img src="../../../assets/ton_symbol.png" alt="icon">
-    <p>{{currentPoint}}</p>
-  </div>
+  <app-header></app-header>
   <app-business *ngFor="let business of businesses" [business] = business></app-business>
-
 </div>

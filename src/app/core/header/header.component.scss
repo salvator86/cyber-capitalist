@@ -1,0 +1,59 @@
+.header {
+  height: 12vh;
+  position: relative;
+  .header-back {
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+  }
+  .header-content-position {
+    position: relative;
+    color: white;
+    z-index: 1;
+    .header-content {
+      display: flex;
+      margin-left: 20px;
+      align-items: center;
+      .header-content-avatar {
+        position: relative;
+        .header-avatar-border {
+          height: 95px;
+        }
+        .header-avatar {
+          height: 60px;
+          position: absolute;
+          left: 21px;
+          top: 25px;
+        }
+      }
+      .header-content-money {
+        margin-left: 10px;
+        .header-content-money-current {
+          display: flex;
+          align-items: center;
+          .header-content-money-current-image {
+            height: 34px;
+          }
+          .header-content-money-current-text {
+            margin-left: 10px;
+            font: {
+              size: 22px;
+            }
+          }
+        }
+        .header-content-money-donate {
+          display: flex;
+          align-items: center;
+          margin-top: 7px;
+          margin-left: 6px;
+          .header-content-money-donate-image {
+            width: 22px;
+          }
+          .header-content-money-donate-text {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

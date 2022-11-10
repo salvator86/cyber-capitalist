@@ -6,18 +6,20 @@ import { AppComponent } from './app.component';
 import {SplashScreenModule} from "./features/splash-screen/splash-screen.module";
 import { StartGameScreenComponent } from './features/start-game-screen/start-game-screen.component';
 import {SharedModule} from "./shared/shared.module";
+import {HeaderModule} from "./core/header/header.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     StartGameScreenComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SplashScreenModule,
-    SharedModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        SplashScreenModule,
+        SharedModule,
+        HeaderModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

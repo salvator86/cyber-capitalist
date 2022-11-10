@@ -7,20 +7,28 @@
       </div>
     </div>
   </ng-container>
-  <button [disabled]="active" (click)="earn(loading)" class="business-earn {{styleActive}}"></button>
+  <button [disabled]="active" (click)="earn(loading)" class="business-earn">
+    <img class="business-earn-icon" src="../../../assets/IconItem.png" alt="icon">
+  </button>
   <div class="business-info">
-    <div class="business-info-earn">
-      <div class="green" #loading></div>
-      <p>{{business.startPrice | number: '1.0-2'}}</p>
-    </div>
-    <div class="business-info-improve">
-      <button (click)="increaseBusinessEarn()">Buy x1 {{business.cost}}</button>
-      <div *ngIf="count; else showTime">
-        <div>{{count / 1000 | number: '1.0-0'}}</div>
+    <div class="business-info-position">
+      <div class="business-info-earn">
+        <div class="green" #loading></div>
+        <p>{{business.startPrice | number: '1.0-2'}}</p>
       </div>
-      <ng-template #showTime>
-        <div>{{time / 1000 | number: '1.0-0'}}</div>
-      </ng-template>
+      <div class="business-info-improve">
+        <button [disabled]="disabledIncrease" class="business-info-improve-button" (click)="increaseBusinessEarn()">Buy x1 {{business.cost}}</button>
+        <div *ngIf="count; else showTime">
+          <div class="business-info-improve-sec-block">
+            <div class="business-info-improve-sec"><p>{{count / 1000 | number: '1.0-0'}} s</p></div>
+          </div>
+        </div>
+        <ng-template #showTime>
+          <div class="business-info-improve-sec-block">
+            <div class="business-info-improve-sec"><p>{{time / 1000 | number: '1.0-0'}} s</p></div>
+          </div>
+        </ng-template>
+      </div>
     </div>
   </div>
 </div>
