@@ -1,15 +1,13 @@
 .header {
-  height: 12vh;
   position: relative;
-  .header-back {
-    height: fit-content;
-    width: 100%;
-    position: absolute;
-  }
   .header-content-position {
+    background-image: url("../../../assets/Header.png");
+    background-size: cover;
     position: relative;
     color: white;
-    z-index: 1;
+    width: 100%;
+    min-height: fit-content;
+    //z-index: 1;
     .header-content {
       display: flex;
       margin-left: 20px;
