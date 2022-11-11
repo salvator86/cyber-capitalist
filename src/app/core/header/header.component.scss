@@ -1,5 +1,7 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 3;
   .header-content-position {
     background-image: url("../../../assets/Header.png");
     background-size: cover;
@@ -7,7 +9,6 @@
     color: white;
     width: 100%;
     min-height: fit-content;
-    //z-index: 1;
     .header-content {
       display: flex;
       margin-left: 20px;
@@ -51,6 +52,32 @@
             margin-left: 10px;
           }
         }
+      }
+    }
+  }
+  .bonus-buttons-block {
+    position: absolute;
+    right: 9px;
+    top: 155px;
+    .bonus-buttons-block-bonus {
+      display: block;
+      background: none;
+      border: none;
+      width: 45px;
+      position: relative;
+      .bonus-buttons-block-bonus-image {
+        width: 100%;
+      }
+    }
+    .bonus-buttons-block-bonus-ton {
+      display: block;
+      background: none;
+      border: none;
+      width: 45px;
+      margin-top: 105px;
+      position: relative;
+      .bonus-buttons-block-bonus-ton-image {
+        width: 100%;
       }
     }
   }

@@ -19,6 +19,26 @@
           size: 44px;
         }
         z-index: 1;
+        animation: blur 3s ease-out infinite;
+      }
+      @keyframes blur {
+        from {
+          text-shadow:0 0 15px #fff,
+          0 0 14px #fff,
+          0 0 13px #fff,
+          0 0 12px #fff,
+          0 0 11px #fff,
+          0 0 10px #fff,
+          0 0 9px #fff,
+          0 0 8px #fff,
+          0 0 7px #fff,
+          0 0 6px #fff,
+          0 0 5px #fff,
+          0 0 4px #fff,
+          0 0 3px #fff,
+          0 0 2px #fff,
+          0 0 5px #fff;
+        }
       }
       .splash-screen-text-transparent {
         text-align: center;
