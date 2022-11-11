@@ -15,7 +15,7 @@
     z-index: 2;
     display: flex;
     align-items: center;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
     .buy-business-elements {
       font-size: 18px;
       width: 80%;
@@ -35,13 +35,24 @@
       }
     }
   }
+  .enable-button-buy {
+    opacity: .3;
+  }
   .business-earn {
     width: 40%;
     background: none;
     border: none;
     transition: .1s;
-    .business-earn-icon {
+    position: relative;
+    .business-earn-icon-back {
       width: 100%;
+    }
+    .business-earn-icon {
+      width: 70%;
+      position: absolute;
+      top: 14px;
+      left: 10px;
+      height: 70%;
     }
   }
   .flash-earn {

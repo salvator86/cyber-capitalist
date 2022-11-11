@@ -1,7 +1,7 @@
 <div class="business-block {{availableBlock}}">
   <ng-container *ngIf="!business.sold">
     <div class="buy-business-block" (click)="buyBusiness()">
-      <div class="buy-business-elements">
+      <div class="buy-business-elements {{enableButtonBuy}}">
         <p>buy it for {{business.available}}</p>
 <!--        <button class="buy-business-elements-button" [disabled]="disabledButtonBuy" >buy</button>-->
         <ng-container *ngIf="disabledButtonBuy">
@@ -13,7 +13,8 @@
     </div>
   </ng-container>
   <button [disabled]="active" (click)="earn(loading)" class="business-earn {{flashEarn}}">
-    <img class="business-earn-icon" src="assets/IconItem.png" alt="icon">
+    <img class="business-earn-icon-back" src="assets/IconItem.png" alt="back-icon">
+    <img class="business-earn-icon" src="{{business.path}}" alt="icon">
   </button>
   <div class="business-info">
     <div class="business-info-position" (click)="increaseBusinessEarn()">

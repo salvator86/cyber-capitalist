@@ -19,6 +19,7 @@ export class BusinessComponent implements OnInit {
   disabledButtonBuy: boolean = true;
   disabledIncrease: boolean = true;
   flashEarn: string;
+  enableButtonBuy: string;
 
   constructor(private pointManagerService: PointManagerService) { }
 
@@ -26,6 +27,13 @@ export class BusinessComponent implements OnInit {
     this.pointManagerService.current.subscribe(value => {
       this.time = this.business.time;
       this.currentSum = value;
+      if (value >= this.business.available) {
+        this.disabledButtonBuy = false;
+        this.enableButtonBuy = '';
+      } else {
+        this.disabledButtonBuy = true;
+        this.enableButtonBuy = 'enable-button-buy';
+      }
       this.disabledButtonBuy = value < this.business.available;
       this.disabledIncrease = value < this.business.cost;
       if (this.business.sold && !this.active) {
@@ -38,8 +46,8 @@ export class BusinessComponent implements OnInit {
     if (!this.business.sold && this.currentSum >= this.business.available) {
       this.pointManagerService.current.next(this.currentSum - this.business.available)
       this.business.sold = true;
+      this.flashEarn = 'flash-earn';
     }
-    this.flashEarn = 'flash-earn';
   }
 
   earn(loading: HTMLDivElement) {
