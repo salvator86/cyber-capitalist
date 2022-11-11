@@ -17,25 +17,72 @@
     align-items: center;
     backdrop-filter: blur(3px);
     .buy-business-elements {
+      font-size: 18px;
       width: 80%;
       display: flex;
       margin: 0 auto;
       align-items: center;
       justify-content: space-around;
-      .buy-business-elements-button {
-        width: 25%;
-        height: 30%;
+      text-shadow:
+        3px 3px 3px #000000,
+        0 2px 2px #000000,
+        -2px 0 2px #000000;
+      .buy-business-elements-lock {
+        img {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
   .business-earn {
     width: 40%;
-    //height: 95px;
     background: none;
     border: none;
+    transition: .1s;
     .business-earn-icon {
       width: 100%;
-      //height: 95px;
+    }
+  }
+  .flash-earn {
+    animation: blur 1.5s ease-in-out infinite;
+    @keyframes blur {
+      10% {
+        -webkit-filter: drop-shadow(0 0 1px #222);
+        filter: drop-shadow(0 0 1px #222);
+      }
+      20% {
+        -webkit-filter: drop-shadow(0 0 3px #222);
+        filter: drop-shadow(0 0 3px #222);
+      }
+      30% {
+        -webkit-filter: drop-shadow(0 0 6px #222);
+        filter: drop-shadow(0 0 6px #222);
+      }
+      40% {
+        -webkit-filter: drop-shadow(0 0 7px #222);
+        filter: drop-shadow(0 0 7px #222);
+      }
+      50% {
+        -webkit-filter: drop-shadow(0 0 8px #222);
+        filter: drop-shadow(0 0 8px #222);
+      }
+      70% {
+        -webkit-filter: drop-shadow(0 0 6px #222);
+        filter: drop-shadow(0 0 6px #222);
+      }
+      80% {
+        -webkit-filter: drop-shadow(0 0 5px #222);
+        filter: drop-shadow(0 0 5px #222);
+      }
+      90% {
+        -webkit-filter: drop-shadow(0 0 3px #222);
+        filter: drop-shadow(0 0 3px #222);
+      }
+      100% {
+        -webkit-filter: drop-shadow(0 0 1px #222);
+        filter: drop-shadow(0 0 1px #222);
+      }
     }
   }
   .business-info {
@@ -44,34 +91,13 @@
     margin-top: auto;
     width: 60%;
     .business-info-position {
-      //position: absolute;
       bottom: 0;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      //&:after {
-      //  content: "";
-      //  position: absolute;
-      //  right: -1px;
-      //  top:  -1px;
-      //  border-top: 10px solid #FBDA42;
-      //  border-left: 10px solid transparent;
-      //}
-      //&:before {
-      //  content: "";
-      //  width: 10px;
-      //  height: 10px;
-      //  color: white;
-      //  position: absolute;
-      //  right: 3px;
-      //  top: 2px;
-      //  border-top: 2px solid white;
-      //  rotate: 45deg;
-      //  z-index: 1;
-      //}
       .business-info-earn {
         position: relative;
-        width: 99%;
+        width: 97%;
         height: 30px;
         border: 2px solid white;
         border-top-right-radius: 10px;
@@ -126,7 +152,6 @@
             }
           }
         }
-
       }
     }
   }
