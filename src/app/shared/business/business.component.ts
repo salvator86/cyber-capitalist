@@ -81,10 +81,13 @@ export class BusinessComponent implements OnInit {
   increaseBusinessEarn(): void {
     if (this.business.sold && this.business.cost <= this.currentSum) {
       this.pointManagerService.increaseCurrent(this.currentSum - this.business.cost)
+      this.business.cost = this.business.cost + (this.business.cost * 0.3);
       this.pointManagerService.businesses.map(business => {
         if (business.time === this.business.time) {
           business.startPrice = business.startPrice + business.increase;
-          business.cost = business.cost + (business.cost * 0.3);
+          if (this.business.cost > this.currentSum) {
+            this.disabledIncrease = true;
+          }
         }
       })
     }
