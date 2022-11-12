@@ -2,8 +2,10 @@ main {
   background: #FBDA42;
   .main-back {
     position: fixed;
-    top: 25%;
-    left: 25%;
+    //top: 25%;
+    //left: 25%;
+    bottom: 0;
+    right: 0;
     width: 73%;
     height: 67%;
   }

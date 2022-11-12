@@ -84,6 +84,7 @@ export class BusinessComponent implements OnInit {
       this.pointManagerService.businesses.map(business => {
         if (business.time === this.business.time) {
           business.startPrice = business.startPrice + business.increase;
+          business.cost = business.cost + (business.cost * 0.3);
         }
       })
     }
