@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
-* {
+*, body, html {
   margin: 0;
   padding: 0;
   font: {
@@ -8,4 +8,5 @@
 }
 body {
   touch-action: manipulation;
+  background: #FBDA42;
 }

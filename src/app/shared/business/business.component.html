@@ -31,12 +31,12 @@
         </button>
         <div *ngIf="count; else showTime">
           <div class="business-info-improve-sec-block">
-            <div class="business-info-improve-sec"><p>{{count / 1000 | number: '1.0-0'}}s</p></div>
+            <div class="business-info-improve-sec"><p>{{count / 1000 | number: '1.0-0' | convertTime}}</p></div>
           </div>
         </div>
         <ng-template #showTime>
           <div class="business-info-improve-sec-block">
-            <div class="business-info-improve-sec"><p>{{time / 1000 | number: '1.0-0'}}s</p></div>
+            <div class="business-info-improve-sec"><p>{{time / 1000 | number: '1.0-0' | convertTime}}</p></div>
           </div>
         </ng-template>
       </div>

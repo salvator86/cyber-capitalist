@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BusinessComponent } from './business/business.component';
+import { ConvertTimePipe } from '../convert-time.pipe';
 
 
 
 @NgModule({
   declarations: [
-    BusinessComponent
+    BusinessComponent,
+    ConvertTimePipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     BusinessComponent

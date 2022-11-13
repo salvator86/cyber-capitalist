@@ -8,9 +8,9 @@ import { HeaderComponent } from './header.component';
   declarations: [
     HeaderComponent
   ],
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+    ],
   exports: [
     HeaderComponent
   ]

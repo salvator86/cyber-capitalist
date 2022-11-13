@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IBusiness, PointManagerService} from "../../services/point-manager.service";
-import {map, Subject} from "rxjs";
 
 @Component({
   selector: 'app-business',
