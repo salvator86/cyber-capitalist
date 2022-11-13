@@ -23,7 +23,12 @@
         <p>{{business.startPrice | number: '1.0-2'}}</p>
       </div>
       <div class="business-info-improve">
-        <button [disabled]="disabledIncrease && business.sold" class="business-info-improve-button">Buy x1 {{business.cost | number: '1.0-2'}}</button>
+        <button [disabled]="disabledIncrease && business.sold" class="business-info-improve-button">
+          <img src="assets/ButtonBuy.png" alt="">
+          <div>
+            <p>Buy x1 {{business.cost | number: '1.0-2'}}</p>
+          </div>
+        </button>
         <div *ngIf="count; else showTime">
           <div class="business-info-improve-sec-block">
             <div class="business-info-improve-sec"><p>{{count / 1000 | number: '1.0-0'}}s</p></div>

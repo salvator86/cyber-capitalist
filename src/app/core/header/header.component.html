@@ -8,7 +8,7 @@
       <div class="header-content-money">
         <div class="header-content-money-current">
           <img class="header-content-money-current-image" src="assets/coin.png" alt="main-symbol">
-          <p class="header-content-money-current-text">{{currentPoint | number: '1.0-2'}}</p>
+          <p (click)="reset()" class="header-content-money-current-text">{{currentPoint | number: '1.0-2'}}</p>
         </div>
         <div class="header-content-money-donate">
           <img class="header-content-money-donate-image" src="assets/ton_symbol.png" alt="coin">

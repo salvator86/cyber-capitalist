@@ -1,0 +1,10 @@
+[{"startPrice":2025.5,"time":600,"cost":1025.5,"increase":250.05,"available":0,"sold":true,"path":"assets/Dog.png"},
+  {"startPrice":5880.3,"time":2000,"cost":3025.8,"increase":1250.3,"available":50000,"sold":false,"path":"assets/Car.png"},
+  {"startPrice":6480.2,"time":6000,"cost":6594.1,"increase":2250.5,"available":120000,"sold":false,"path":"assets/Brain.png"},
+  {"startPrice":9230.8,"time":18000,"cost":10800.7,"increase":3200.7,"available":350000,"sold":false,"path":"assets/Prosthesis.png"},
+  {"startPrice":10560.4,"time":36000,"cost":15600.9,"increase":4100.2,"available":800000,"sold":false,"path":"assets/House.png"},
+  {"startPrice":15600.5,"time":80000,"cost":20300.7,"increase":6100.1,"available":1600000,"sold":false,"path":"assets/Dog.png"},
+  {"startPrice":24200.1,"time":180000,"cost":25025.8,"increase":10250.3,"available":3000000,"sold":false,"path":"assets/Car.png"},
+  {"startPrice":70500.2,"time":600000,"cost":50750.2,"increase":30000.25,"available":5000000,"sold":false,"path":"assets/Brain.png"},
+  {"startPrice":190230.8,"time":900000,"cost":108000.7,"increase":68000.7,"available":7000000,"sold":false,"path":"assets/Prosthesis.png"},
+  {"startPrice":300560.4,"time":1200000,"cost":150600.9,"increase":100000.2,"available":10000000,"sold":false,"path":"assets/House.png"}]

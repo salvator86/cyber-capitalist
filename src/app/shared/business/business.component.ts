@@ -47,6 +47,8 @@ export class BusinessComponent implements OnInit {
       this.pointManagerService.current.next(this.currentSum - this.business.available)
       this.business.sold = true;
       this.flashEarn = 'flash-earn';
+      window.localStorage.setItem('current', JSON.stringify(this.currentSum));
+      window.localStorage.setItem('business', JSON.stringify(this.pointManagerService.businesses));
     }
   }
 
@@ -73,9 +75,11 @@ export class BusinessComponent implements OnInit {
         this.time = this.business.time;
         loading.style.width = '';
         this.flashEarn = 'flash-earn';
-        this.pointManagerService.increaseCurrent(this.currentSum + this.business.startPrice)
+        this.pointManagerService.increaseCurrent(this.currentSum + this.business.startPrice);
+        window.localStorage.setItem('current', JSON.stringify(this.currentSum));
       }, this.business.time)
     }
+    window.localStorage.setItem('business', JSON.stringify(this.pointManagerService.businesses));
   }
 
   increaseBusinessEarn(): void {
@@ -91,6 +95,8 @@ export class BusinessComponent implements OnInit {
         }
       })
     }
+    window.localStorage.setItem('current', JSON.stringify(this.currentSum));
+    window.localStorage.setItem('business', JSON.stringify(this.pointManagerService.businesses));
   }
 
 }
