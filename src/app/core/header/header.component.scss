@@ -3,26 +3,26 @@
   top: 0;
   z-index: 3;
   .header-content-position {
-    background-image: url("../../../assets/Header.png");
-    background-size: cover;
     position: relative;
     color: white;
     width: 100%;
-    min-height: fit-content;
+    height: 16vh;
+    .header-content-position-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
     .header-content {
+      z-index: 3;
+      position: absolute;
       display: flex;
       margin-left: 20px;
       align-items: center;
       .header-content-avatar {
         position: relative;
         .header-avatar-border {
-          height: 95px;
-        }
-        .header-avatar {
-          height: 60px;
-          position: absolute;
-          left: 21px;
-          top: 25px;
+          height: 14vh;
         }
       }
       .header-content-money {
@@ -31,12 +31,12 @@
           display: flex;
           align-items: center;
           .header-content-money-current-image {
-            height: 34px;
+            height: 5vh;
           }
           .header-content-money-current-text {
             margin-left: 10px;
             font: {
-              size: 22px;
+              size: 3vh;
             }
           }
         }
@@ -44,12 +44,15 @@
           display: flex;
           align-items: center;
           margin-top: 7px;
-          margin-left: 6px;
+          margin-left: 3.5%;
           .header-content-money-donate-image {
-            width: 22px;
+            height: 3.8vh;
           }
           .header-content-money-donate-text {
             margin-left: 10px;
+            font: {
+              size: 2vh;
+            }
           }
         }
       }

@@ -5,6 +5,9 @@
   font: {
     family: 'Aldrich';
   }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 body {
   touch-action: manipulation;

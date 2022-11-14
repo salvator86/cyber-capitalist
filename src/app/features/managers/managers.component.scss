@@ -1,0 +1,17 @@
+.managers {
+  .managers-close {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    right: 0;
+  }
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%);
+  max-width: 420px;
+  img {
+    margin: 0 auto;
+    width: 100%;
+  }
+}

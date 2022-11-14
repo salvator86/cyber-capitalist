@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Router} from "@angular/router";
-
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -8,6 +7,8 @@ import {Router} from "@angular/router";
 })
 export class FooterComponent implements OnInit {
 
+  menu: boolean = false;
+  rotateMenuButton: string = '';
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -15,5 +16,26 @@ export class FooterComponent implements OnInit {
 
   openShop() {
     this.router.navigate(['/shop'])
+  }
+
+  openMenu() {
+    this.menu = !this.menu;
+    if (this.rotateMenuButton) {
+      this.rotateMenuButton = '';
+    } else {
+      this.rotateMenuButton = 'rotate-menu-button';
+    }
+  }
+
+  openManagers() {
+    this.router.navigate(['managers']);
+  }
+
+  openUpgrades() {
+    this.router.navigate(['upgrades']);
+  }
+
+  openInventory() {
+    this.router.navigate(['inventory']);
   }
 }

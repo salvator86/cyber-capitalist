@@ -1,5 +1,9 @@
 .start-game-block {
   margin: 0 auto;
   max-width: 414px;
+  .start-game-businesses {
+    height: 72vh;
+    overflow: scroll;
+    padding-bottom: 10px;
+  }
 }
-
