@@ -4,7 +4,6 @@
       <div class="buy-business-block" (click)="buyBusiness()">
         <div class="buy-business-elements {{enableButtonBuy}}">
           <p>buy it for {{business.available}}</p>
-          <!--        <button class="buy-business-elements-button" [disabled]="disabledButtonBuy" >buy</button>-->
           <ng-container *ngIf="disabledButtonBuy">
             <div class="buy-business-elements-lock">
               <img src="assets/lock.png" alt="">

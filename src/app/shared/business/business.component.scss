@@ -3,7 +3,6 @@
   .business-block {
     display: flex;
     position: relative;
-    width: 100%;
     margin: {
       top: 25px;
       left: 20px;
@@ -146,8 +145,6 @@
             position: relative;
             display: block;
             color: white;
-            //background: url("../../../assets/ButtonBuy.png");
-            //background-size: cover;
             background: none;
             border: none;
             width: 62%;
