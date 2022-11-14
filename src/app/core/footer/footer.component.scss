@@ -14,6 +14,8 @@
     display: grid;
     align-items: end;
     .menu-display {
+      position: fixed;
+      width: 100%;
       height: 60%;
       display: flex;
       flex-direction: column;
