@@ -57,9 +57,9 @@ footer {
   //}
   max-width: 420px;
   z-index: 3;
-  position: fixed;
-  bottom: -1px;
-  height: 12%;
+  position: sticky;
+  bottom: 0;
+  height: 11%;
   width: 100%;
   .footer-back {
     height: 100%;
@@ -126,7 +126,6 @@ footer {
             opacity: 1;
             z-index: 5;
           }
-
           .menu-item-text {
             position: absolute;
             top: 33%;
