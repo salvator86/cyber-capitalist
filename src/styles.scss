@@ -8,8 +8,11 @@
   ::-webkit-scrollbar {
     display: none;
   }
+  //overflow: hidden;
 }
 body {
   touch-action: manipulation;
   background: #FBDA42;
 }
+
+html, body { height: 100%; overflow: hidden; }

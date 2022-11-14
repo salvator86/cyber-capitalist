@@ -2,9 +2,11 @@
   margin: 0 auto;
   max-width: 414px;
   height: 100vh;
+  //overflow: scroll;
   .start-game-businesses {
     height: 72%;
-    overflow: scroll;
+    //height: 100vh;
+    overflow: auto;
     padding-bottom: 10px;
   }
 }
