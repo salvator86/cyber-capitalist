@@ -1,45 +1,85 @@
 <ng-container *ngIf="menu">
-  <div class="menu-back">
-    <div class="menu-block">
-      <div class="menu-display">
-        <div class="menu-item disabled-menu-item">
-          <img class="menu-item-image" src="assets/menu-item-green.png" alt="menu-item-green">
-          <div>
-            <p>CAREER</p>
-          </div>
-        </div>
-        <div class="menu-item" (click)="openManagers()">
-          <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">
-          <div>
-            <p>MANAGERS</p>
-          </div>
-
-        </div>
-        <div class="menu-item" (click)="openUpgrades()">
-          <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">
-          <div>
-            <p>UPGRADES</p>
-          </div>
-        </div>
-        <div class="menu-item  disabled-menu-item">
-          <img class="menu-item-image" src="assets/menu-item-green.png" alt="menu-item-green">
-          <div>
-            <p>UNLOCKS</p>
-          </div>
-        </div>
-        <div class="menu-item" (click)="openInventory()">
-          <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">
-          <div>
-            <p>INVENTORY</p>
+  <div class="menu-back"></div>
+</ng-container>
+<footer>
+  <ng-container *ngIf="menu">
+    <!--    <div class="menu-back">-->
+    <!--      <div class="menu-block">-->
+    <!--        <div class="menu-display">-->
+    <!--          <div class="menu-item disabled-menu-item">-->
+    <!--            <img class="menu-item-image" src="assets/menu-item-green.png" alt="menu-item-green">-->
+    <!--            <div>-->
+    <!--              <p>CAREER</p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="menu-item" (click)="openManagers()">-->
+    <!--            <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">-->
+    <!--            <div>-->
+    <!--              <p>MANAGERS</p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="menu-item" (click)="openUpgrades()">-->
+    <!--            <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">-->
+    <!--            <div>-->
+    <!--              <p>UPGRADES</p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="menu-item  disabled-menu-item">-->
+    <!--            <img class="menu-item-image" src="assets/menu-item-green.png" alt="menu-item-green">-->
+    <!--            <div>-->
+    <!--              <p>UNLOCKS</p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="menu-item" (click)="openInventory()">-->
+    <!--            <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">-->
+    <!--            <div>-->
+    <!--              <p>INVENTORY</p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+  </ng-container>
+  <div class="footer-back">
+    <ng-container *ngIf="menu">
+      <div class="menu-block">
+        <div class="menu-display">
+          <div class="menu-items">
+            <div class="menu-item disabled-menu-item">
+              <img class="menu-item-image" src="assets/menu-item-green.png" alt="menu-item-green">
+              <div class="menu-item-text">
+                <p>CAREER</p>
+              </div>
+            </div>
+            <div class="menu-item" (click)="openManagers()">
+              <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">
+              <div class="menu-item-text">
+                <p>MANAGERS</p>
+              </div>
+            </div>
+            <div class="menu-item" (click)="openUpgrades()">
+              <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">
+              <div class="menu-item-text">
+                <p>UPGRADES</p>
+              </div>
+            </div>
+            <div class="menu-item disabled-menu-item">
+              <img class="menu-item-image" src="assets/menu-item-green.png" alt="menu-item-green">
+              <div class="menu-item-text">
+                <p>UNLOCKS</p>
+              </div>
+            </div>
+            <div class="menu-item" (click)="openInventory()">
+              <img class="menu-item-image" src="assets/menu-item-red.png" alt="menu-item-red">
+              <div class="menu-item-text">
+                <p>INVENTORY</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</ng-container>
-<footer>
-  <div class="footer-back">
-    <img src="assets/Footer.png" alt="footer-back">
+    </ng-container>
+    <img class="footer-background" src="assets/Footer.png" alt="footer-back">
     <div (click)="openShop()" class="shop-block">
       <img src="assets/Shop.png" alt="">
     </div>

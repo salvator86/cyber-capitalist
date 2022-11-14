@@ -1,44 +1,46 @@
-<div class="business-block {{availableBlock}}">
-  <ng-container *ngIf="!business.sold">
-    <div class="buy-business-block" (click)="buyBusiness()">
-      <div class="buy-business-elements {{enableButtonBuy}}">
-        <p>buy it for {{business.available}}</p>
-<!--        <button class="buy-business-elements-button" [disabled]="disabledButtonBuy" >buy</button>-->
-        <ng-container *ngIf="disabledButtonBuy">
-          <div class="buy-business-elements-lock">
-            <img src="assets/lock.png" alt="">
-          </div>
-        </ng-container>
-      </div>
-    </div>
-  </ng-container>
-  <button [disabled]="active" (click)="earn(loading)" class="business-earn {{flashEarn}}">
-    <img class="business-earn-icon-back" src="assets/IconItem.png" alt="back-icon">
-    <img class="business-earn-icon" src="{{business.path}}" alt="icon">
-  </button>
-  <div class="business-info">
-    <div class="business-info-position" (click)="increaseBusinessEarn()">
-      <div class="business-info-earn">
-        <div class="green" #loading></div>
-        <p>{{business.startPrice | number: '1.0-2'}}</p>
-      </div>
-      <div class="business-info-improve">
-        <button [disabled]="disabledIncrease && business.sold" class="business-info-improve-button">
-          <img src="assets/ButtonBuy.png" alt="">
-          <div>
-            <p>Buy x1 {{business.cost | number: '1.0-2'}}</p>
-          </div>
-        </button>
-        <div *ngIf="count; else showTime">
-          <div class="business-info-improve-sec-block">
-            <div class="business-info-improve-sec"><p>{{count / 1000 | number: '1.0-0' | convertTime}}</p></div>
-          </div>
+<div class="business-block-for-scroll">
+  <div class="business-block {{availableBlock}}">
+    <ng-container *ngIf="!business.sold">
+      <div class="buy-business-block" (click)="buyBusiness()">
+        <div class="buy-business-elements {{enableButtonBuy}}">
+          <p>buy it for {{business.available}}</p>
+          <!--        <button class="buy-business-elements-button" [disabled]="disabledButtonBuy" >buy</button>-->
+          <ng-container *ngIf="disabledButtonBuy">
+            <div class="buy-business-elements-lock">
+              <img src="assets/lock.png" alt="">
+            </div>
+          </ng-container>
         </div>
-        <ng-template #showTime>
-          <div class="business-info-improve-sec-block">
-            <div class="business-info-improve-sec"><p>{{time / 1000 | number: '1.0-0' | convertTime}}</p></div>
+      </div>
+    </ng-container>
+    <button [disabled]="active" (click)="earn(loading)" class="business-earn {{flashEarn}}">
+      <img class="business-earn-icon-back" src="assets/IconItem.png" alt="back-icon">
+      <img class="business-earn-icon" src="{{business.path}}" alt="icon">
+    </button>
+    <div class="business-info">
+      <div class="business-info-position" (click)="increaseBusinessEarn()">
+        <div class="business-info-earn">
+          <div class="green" #loading></div>
+          <p>{{business.startPrice | number: '1.0-2'}}</p>
+        </div>
+        <div class="business-info-improve">
+          <button [disabled]="disabledIncrease && business.sold" class="business-info-improve-button">
+            <img src="assets/ButtonBuy.png" alt="">
+            <div>
+              <p>Buy x1 {{business.cost | number: '1.0-2'}}</p>
+            </div>
+          </button>
+          <div *ngIf="count; else showTime">
+            <div class="business-info-improve-sec-block">
+              <div class="business-info-improve-sec"><p>{{count / 1000 | number: '1.0-0' | convertTime}}</p></div>
+            </div>
           </div>
-        </ng-template>
+          <ng-template #showTime>
+            <div class="business-info-improve-sec-block">
+              <div class="business-info-improve-sec"><p>{{time / 1000 | number: '1.0-0' | convertTime}}</p></div>
+            </div>
+          </ng-template>
+        </div>
       </div>
     </div>
   </div>

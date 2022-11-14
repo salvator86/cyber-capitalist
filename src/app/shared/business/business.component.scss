@@ -1,191 +1,195 @@
-.business-block {
-  display: flex;
-  position: relative;
-  width: 70%;
-  margin: {
-    top: 25px;
-    left: 20px;
-    bottom: 20px;
-  }
-  .buy-business-block {
-    border: 1px solid gray;
-    box-shadow: 5px 5px 10px gray;
-    border-radius: 10px;
-    position: absolute;
-    width: 101%;
-    height: 100%;
-    color: white;
-    margin: 0 auto;
-    z-index: 2;
+.business-block-for-scroll {
+  width: 100%;
+  .business-block {
     display: flex;
-    align-items: center;
-    backdrop-filter: blur(5px);
-    .buy-business-elements {
-      font-size: 18px;
-      width: 80%;
-      display: flex;
-      margin: 0 auto;
-      align-items: center;
-      justify-content: space-around;
-      text-shadow:
-        3px 3px 3px #000000,
-        0 2px 2px #000000,
-        -2px 0 2px #000000;
-      .buy-business-elements-lock {
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
-  .enable-button-buy {
-    opacity: .3;
-  }
-  .business-earn {
-    width: 40%;
-    background: none;
-    border: none;
-    transition: .1s;
     position: relative;
-    .business-earn-icon-back {
-      width: 100%;
+    width: 100%;
+    margin: {
+      top: 25px;
+      left: 20px;
+      bottom: 20px;
     }
-    .business-earn-icon {
-      width: 70%;
+    .buy-business-block {
+      border: 1px solid gray;
+      box-shadow: 5px 5px 10px gray;
+      border-radius: 10px;
       position: absolute;
-      top: 14px;
-      left: 10px;
-      height: 70%;
-    }
-  }
-  .flash-earn {
-    animation: blur 1.5s ease-in-out infinite;
-    @keyframes blur {
-      10% {
-        -webkit-filter: drop-shadow(0 0 1px #222);
-        filter: drop-shadow(0 0 1px #222);
-      }
-      20% {
-        -webkit-filter: drop-shadow(0 0 3px #222);
-        filter: drop-shadow(0 0 3px #222);
-      }
-      30% {
-        -webkit-filter: drop-shadow(0 0 6px #222);
-        filter: drop-shadow(0 0 6px #222);
-      }
-      40% {
-        -webkit-filter: drop-shadow(0 0 7px #222);
-        filter: drop-shadow(0 0 7px #222);
-      }
-      50% {
-        -webkit-filter: drop-shadow(0 0 8px #222);
-        filter: drop-shadow(0 0 8px #222);
-      }
-      70% {
-        -webkit-filter: drop-shadow(0 0 6px #222);
-        filter: drop-shadow(0 0 6px #222);
-      }
-      80% {
-        -webkit-filter: drop-shadow(0 0 5px #222);
-        filter: drop-shadow(0 0 5px #222);
-      }
-      90% {
-        -webkit-filter: drop-shadow(0 0 3px #222);
-        filter: drop-shadow(0 0 3px #222);
-      }
-      100% {
-        -webkit-filter: drop-shadow(0 0 1px #222);
-        filter: drop-shadow(0 0 1px #222);
-      }
-    }
-  }
-  .business-info {
-    height: 80%;
-    margin-left: 10px;
-    margin-top: auto;
-    width: 60%;
-    .business-info-position {
-      bottom: 0;
+      width: 70%;
+      height: 100%;
+      color: white;
+      margin: 0 auto;
+      z-index: 2;
       display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      .business-info-earn {
-        position: relative;
-        width: 97%;
-        height: 30px;
-        border: 2px solid white;
-        border-top-right-radius: 10px;
-        background: gray;
-        .green {
-          width: 0;
-          background: #18EE7F;
-          height: 100%;
-          position: absolute;
-          border-top-right-radius: 10px;
-        }
-        p {
-          position: absolute;
-          z-index: 1;
-          color: black;
-          top: 50%;
-          left: 50%;
-          margin-right: -50%;
-          transform: translate(-50%, -50%)
+      align-items: center;
+      backdrop-filter: blur(5px);
+      .buy-business-elements {
+        font-size: 18px;
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-around;
+        text-shadow:
+          3px 3px 3px #000000,
+          0 2px 2px #000000,
+          -2px 0 2px #000000;
+        .buy-business-elements-lock {
+          img {
+            width: 30px;
+            height: 30px;
+          }
         }
       }
-      .business-info-improve {
+    }
+    .enable-button-buy {
+      opacity: .3;
+    }
+    .business-earn {
+      width: 25%;
+      background: none;
+      border: none;
+      transition: .1s;
+      position: relative;
+      .business-earn-icon-back {
+        width: 100%;
+      }
+      .business-earn-icon {
+        width: 70%;
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        height: 70%;
+      }
+    }
+    .flash-earn {
+      animation: blur 1.5s ease-in-out infinite;
+      @keyframes blur {
+        10% {
+          -webkit-filter: drop-shadow(0 0 1px #222);
+          filter: drop-shadow(0 0 1px #222);
+        }
+        20% {
+          -webkit-filter: drop-shadow(0 0 3px #222);
+          filter: drop-shadow(0 0 3px #222);
+        }
+        30% {
+          -webkit-filter: drop-shadow(0 0 6px #222);
+          filter: drop-shadow(0 0 6px #222);
+        }
+        40% {
+          -webkit-filter: drop-shadow(0 0 7px #222);
+          filter: drop-shadow(0 0 7px #222);
+        }
+        50% {
+          -webkit-filter: drop-shadow(0 0 8px #222);
+          filter: drop-shadow(0 0 8px #222);
+        }
+        70% {
+          -webkit-filter: drop-shadow(0 0 6px #222);
+          filter: drop-shadow(0 0 6px #222);
+        }
+        80% {
+          -webkit-filter: drop-shadow(0 0 5px #222);
+          filter: drop-shadow(0 0 5px #222);
+        }
+        90% {
+          -webkit-filter: drop-shadow(0 0 3px #222);
+          filter: drop-shadow(0 0 3px #222);
+        }
+        100% {
+          -webkit-filter: drop-shadow(0 0 1px #222);
+          filter: drop-shadow(0 0 1px #222);
+        }
+      }
+    }
+    .business-info {
+      height: 80%;
+      margin-left: 10px;
+      margin-top: auto;
+      width: 40%;
+      .business-info-position {
+        bottom: 0;
         display: flex;
         justify-content: space-between;
-        margin-top: 7px;
-        width: 100%;
-        .business-info-improve-button {
+        flex-direction: column;
+        .business-info-earn {
           position: relative;
-          display: block;
-          color: white;
-          //background: url("../../../assets/ButtonBuy.png");
-          //background-size: cover;
-          background: none;
-          border: none;
-          width: 62%;
-          height: 36px;
-          transition: .1s;
-          &:disabled {
-            opacity: .5;
-          }
-          img {
-            width: 100%;
+          width: 97%;
+          height: 30px;
+          border: 2px solid white;
+          border-top-right-radius: 10px;
+          background: gray;
+          .green {
+            width: 0;
+            background: #18EE7F;
             height: 100%;
-          }
-          div {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            p {
-              display: block;
-              font-size: 10px;
-              margin: 0 auto;
-            }
+            border-top-right-radius: 10px;
+          }
+          p {
+            position: absolute;
+            z-index: 1;
+            color: black;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            font-size: 2vh;
           }
         }
-        .business-info-improve-sec-block {
-          background: url("../../../assets/Seconds.png");
-          border: none;
-          background-size: cover;
-          width: 60px;
-          border-bottom: 1px solid white;
-          height: 35px;
+        .business-info-improve {
           display: flex;
-          align-items: center;
-          .business-info-improve-sec {
-            margin: 0 auto;
+          justify-content: space-between;
+          margin-top: 7px;
+          width: 100%;
+          .business-info-improve-button {
+            position: relative;
+            display: block;
             color: white;
-            font: {
-              size: 12px;
+            //background: url("../../../assets/ButtonBuy.png");
+            //background-size: cover;
+            background: none;
+            border: none;
+            width: 62%;
+            height: 36px;
+            transition: .1s;
+            &:disabled {
+              opacity: .5;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+            }
+            div {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              p {
+                display: block;
+                font-size: 10px;
+                margin: 0 auto;
+              }
+            }
+          }
+          .business-info-improve-sec-block {
+            background: url("../../../assets/Seconds.png");
+            border: none;
+            background-size: cover;
+            width: 60px;
+            border-bottom: 1px solid white;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            .business-info-improve-sec {
+              margin: 0 auto;
+              color: white;
+              font: {
+                size: 12px;
+              }
             }
           }
         }
