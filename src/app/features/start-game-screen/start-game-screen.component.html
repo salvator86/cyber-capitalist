@@ -1,6 +1,6 @@
 <div class="start-game-block">
   <app-header></app-header>
-  <div class="start-game-businesses">
+  <div class="start-game-businesses" #businessesElement>
     <app-business *ngFor="let business of businesses" [business] = business></app-business>
   </div>
   <app-footer></app-footer>

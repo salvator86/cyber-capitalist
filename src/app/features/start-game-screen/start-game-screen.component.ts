@@ -10,6 +10,7 @@ export class StartGameScreenComponent implements OnInit {
 
   currentPoint: number;
   businesses: IBusiness[];
+
   constructor(private pointManager: PointManagerService) { }
 
   ngOnInit(): void {
