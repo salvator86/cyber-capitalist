@@ -60,6 +60,7 @@
         height: 70%;
       }
     }
+
     .flash-earn {
       animation: blur 1.5s ease-in-out infinite;
       @keyframes blur {
@@ -193,4 +194,7 @@
       }
     }
   }
+}
+.dark-business {
+  background: rgba(0, 0, 0, 0.5);
 }

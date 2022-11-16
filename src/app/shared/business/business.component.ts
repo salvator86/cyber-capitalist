@@ -19,6 +19,8 @@ export class BusinessComponent implements OnInit {
   disabledIncrease: boolean = true;
   flashEarn: string;
   enableButtonBuy: string;
+  newUser: boolean;
+  darkBusiness: string = ''
 
   constructor(private pointManagerService: PointManagerService) { }
 
@@ -39,6 +41,10 @@ export class BusinessComponent implements OnInit {
         this.flashEarn = 'flash-earn';
       }
     });
+    if (this.pointManagerService.newUser) {
+      this.newUser = this.pointManagerService.newUser;
+      // this.darkBusiness = 'dark-business';
+    }
   }
 
   buyBusiness() {

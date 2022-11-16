@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
       this.pointManagerService.businesses = require('../../business.json');
       window.localStorage.setItem('current', JSON.stringify(0));
       this.pointManagerService.current = new BehaviorSubject<number>(0);
+      window.localStorage.removeItem('newUser');
       window.location.reload()
     }
   }

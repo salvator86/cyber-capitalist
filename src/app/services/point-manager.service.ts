@@ -18,6 +18,7 @@ export class PointManagerService {
 
   current: Subject<number>;
   businesses: IBusiness[];
+  newUser: boolean;
 
   constructor() { }
 
@@ -26,6 +27,11 @@ export class PointManagerService {
   }
 
   initializeBusiness() {
+    if (window.localStorage.getItem('newUser')) {
+      this.newUser = false;
+    } else {
+      this.newUser = true;
+    }
     if (window.localStorage.getItem('business')) {
       const dataBusiness: any = window.localStorage.getItem('business');
       this.businesses = JSON.parse(dataBusiness);

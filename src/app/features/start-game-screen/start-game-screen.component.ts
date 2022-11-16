@@ -10,6 +10,8 @@ export class StartGameScreenComponent implements OnInit {
 
   currentPoint: number;
   businesses: IBusiness[];
+  newUser: boolean;
+  currentTutorialScreen: number = 1;
 
   constructor(private pointManager: PointManagerService) { }
 
@@ -18,32 +20,14 @@ export class StartGameScreenComponent implements OnInit {
       this.currentPoint = curr
     })
     this.businesses = this.pointManager.businesses;
+    this.newUser = this.pointManager.newUser;
   }
 
-  // mouseDown = false;
-  //
-  // startY: any;
-  //
-  // scrollTop: any;
-  //
-  // slider = document.querySelector<HTMLElement>('.start-game-businesses');
-
-  // startDragging(e: any, flag: any, el: any) {
-  //   this.mouseDown = true;
-  //   this.startY = e.pageY - el.offsetTop;
-  //   this.scrollTop = el.scrollTop;
-  // }
-  // stopDragging(e: any, flag: any) {
-  //   this.mouseDown = false;
-  // }
-  // moveEvent(e: any, el: any) {
-  //   e.preventDefault();
-  //   if (!this.mouseDown) {
-  //     return;
-  //   }
-  //   const y = e.pageY - el.offsetTop;
-  //   const scroll = y - this.startY;
-  //   el.scrollTop = this.scrollTop - scroll;
-  // }
+  endTutorial() {
+    this.newUser = false;
+    this.pointManager.newUser = false;
+    window.localStorage.setItem('newUser', 'false');
+    this.currentTutorialScreen = 0;
+  }
 
 }

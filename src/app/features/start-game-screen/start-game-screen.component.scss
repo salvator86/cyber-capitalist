@@ -1,12 +1,43 @@
 .start-game-block {
   margin: 0 auto;
   max-width: 414px;
-  //height: 100vh;
-  //overflow: scroll;
+  cursor: inherit;
+  user-select: none;
+  position: relative;
+  //.tutorial-position {
+  //  position: absolute;
+  //  top: 0;
+  //  height: 100vh;
+  //  z-index: 5;
+  //  width: 100%;
+  //  overflow: hidden;
+  //  .place-dark-top {
+  //    height: 15vh;
+  //    background: rgba(0, 0, 0, 0.5);
+  //    //position: fixed;
+  //  }
+  //  .place-icon {
+  //    height: 15vh;
+  //  }
+  //  .place-dark-bottom {
+  //    height: 70vh;
+  //    background: rgba(0, 0, 0, 0.5);
+  //  }
+  //}
   .start-game-businesses {
     //height: 100%;
-    //height: 100vh;
     //overflow: scroll;
     //padding-bottom: 10px;
+  }
+  .tutorial {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    //width: 100%;
+    z-index: 5;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }

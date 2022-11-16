@@ -4,4 +4,16 @@
     <app-business *ngFor="let business of businesses" [business] = business></app-business>
   </div>
   <app-footer></app-footer>
+  <ng-container *ngIf="newUser">
+    <ng-container *ngIf="currentTutorialScreen === 1">
+      <div class="tutorial" (click)="currentTutorialScreen = currentTutorialScreen + 1">
+        <img src="assets/first-tutorial.png" alt="tutorial">
+      </div>
+    </ng-container>
+    <ng-container *ngIf="currentTutorialScreen === 2">
+      <div class="tutorial" (click)="endTutorial()">
+        <img src="assets/second-tutorial.png" alt="tutorial">
+      </div>
+    </ng-container>
+  </ng-container>
 </div>
