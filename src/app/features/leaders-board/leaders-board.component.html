@@ -8,8 +8,35 @@
   </div>
   <div class="board-of-leaders">
     <img src="assets/background-leaders.png" alt="">
-    <div>
-
+    <div class="board-of-leaders_title-block">
+      <img src="assets/title-of-leaders.png" alt="title of leaders">
+    </div>
+    <div class="board-of-leaders_field-of-leaders">
+      <div class="board-of-leaders_leader" *ngFor="let leader of leaders, let i = index">
+        <div class="leader-block">
+          <img class="leader-back" src="assets/leader-back.png" alt="">
+          <ng-container *ngIf="i > 2 && i < 9">
+            <p class="leader-position-number">{{i + 1}}</p>
+          </ng-container>
+          <ng-container *ngIf="i >= 9">
+            <p class="leader-position-big-number">{{i + 1}}</p>
+          </ng-container>
+          <ng-container *ngIf="i === 0">
+            <img class="leader-position-photo" src="assets/first.png" alt="first">
+          </ng-container>
+          <ng-container *ngIf="i === 1">
+            <img class="leader-position-photo" src="assets/second.png" alt="second">
+          </ng-container>
+          <ng-container *ngIf="i === 2">
+            <img class="leader-position-photo" src="assets/third.png" alt="third">
+          </ng-container>
+          <p class="leader-block_name">{{leader.name | uppercase}}</p>
+          <div class="capital">
+            <img src="assets/coin.png" alt="">
+            <p class="leader-block_capital">{{leader.capital | number: '1.0-0'}}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
