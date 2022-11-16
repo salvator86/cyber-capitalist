@@ -11,6 +11,7 @@ export class StartGameScreenComponent implements OnInit {
   currentPoint: number;
   businesses: IBusiness[];
   newUser: boolean;
+  firstBusiness: IBusiness;
   currentTutorialScreen: number = 1;
 
   constructor(private pointManager: PointManagerService) { }
@@ -21,6 +22,7 @@ export class StartGameScreenComponent implements OnInit {
     })
     this.businesses = this.pointManager.businesses;
     this.newUser = this.pointManager.newUser;
+    this.firstBusiness = this.pointManager.businesses[0];
   }
 
   endTutorial() {

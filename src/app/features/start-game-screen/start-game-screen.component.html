@@ -1,16 +1,18 @@
 <div class="start-game-block">
-  <app-header></app-header>
-  <div class="start-game-businesses">
-    <app-business *ngFor="let business of businesses" [business] = business></app-business>
-  </div>
-  <app-footer></app-footer>
+  <ng-container>
+    <app-header></app-header>
+    <div class="start-game-businesses">
+      <app-business *ngFor="let business of businesses" [business] = business></app-business>
+    </div>
+    <app-footer></app-footer>
+  </ng-container>
   <ng-container *ngIf="newUser">
     <ng-container *ngIf="currentTutorialScreen === 1">
       <div class="tutorial" (click)="currentTutorialScreen = currentTutorialScreen + 1">
         <img src="assets/first-tutorial.png" alt="tutorial">
       </div>
     </ng-container>
-    <ng-container *ngIf="currentTutorialScreen === 2">
+    <ng-container *ngIf="currentTutorialScreen === 2 && currentPoint >= firstBusiness.cost">
       <div class="tutorial" (click)="endTutorial()">
         <img src="assets/second-tutorial.png" alt="tutorial">
       </div>
