@@ -34,10 +34,15 @@
     top: 0;
     height: 100vh;
     z-index: 5;
-    max-width: 420px;
+    width: 100%;
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+  @media (min-width: 500px) {
+    .tutorial {
+      max-width: 420px;
     }
   }
 }
