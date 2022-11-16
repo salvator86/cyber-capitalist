@@ -6,6 +6,7 @@ import {ShopComponent} from "./features/shop/shop.component";
 import {ManagersComponent} from "./features/managers/managers.component";
 import {UpgradesComponent} from "./features/upgrades/upgrades.component";
 import {InventoryComponent} from "./features/inventory/inventory.component";
+import {LeadersBoardComponent} from "./features/leaders-board/leaders-board.component";
 
 const routes: Routes = [
   {path: '', component: SplashScreenComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'shop', component: ShopComponent},
   {path: 'managers', component: ManagersComponent},
   {path: 'upgrades', component: UpgradesComponent},
-  {path: 'inventory', component: InventoryComponent}
+  {path: 'inventory', component: InventoryComponent},
+  {path: 'leaders-board', component: LeadersBoardComponent}
 ];
 
 @NgModule({

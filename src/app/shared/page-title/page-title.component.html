@@ -1,0 +1,12 @@
+<div class="private-header">
+  <img class="private-header-back" src="assets/header-title-back.png" alt="title-header">
+  <h1 class="private-header-title">{{title}}</h1>
+  <div class="private-header-currentSum-block">
+    <img src="assets/coin.png" alt="coin">
+    <p>{{currentSum | number: '1.0-2'}}</p>
+  </div>
+  <div class="private-header-button">
+    <img src="assets/close-link.png" alt="">
+    <button class="private-header-button-close" (click)="returnToGamePage()"></button>
+  </div>
+</div>

@@ -8,11 +8,13 @@ import { StartGameScreenComponent } from './features/start-game-screen/start-gam
 import {SharedModule} from "./shared/shared.module";
 import {HeaderModule} from "./core/header/header.module";
 import {FooterModule} from "./core/footer/footer.module";
+import { LeadersBoardComponent } from './features/leaders-board/leaders-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartGameScreenComponent,
+    LeadersBoardComponent,
   ],
   imports: [
     BrowserModule,

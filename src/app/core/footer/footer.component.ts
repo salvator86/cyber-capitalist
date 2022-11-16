@@ -38,4 +38,9 @@ export class FooterComponent implements OnInit {
   openInventory() {
     this.router.navigate(['inventory']);
   }
+
+  openLeadersBoards() {
+    this.router.navigate(['leaders-board']);
+  }
+
 }
