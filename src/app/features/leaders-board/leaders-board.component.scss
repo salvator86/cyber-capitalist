@@ -14,7 +14,7 @@
   }
   .board-of-leaders {
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     top: 30vh;
     width: 95%;
     max-height: 450px;
@@ -67,8 +67,8 @@
           .leader-position-big-number {
             position: absolute;
             color: white;
-            font-size: 3.5vh;
-            top: 24%;
+            font-size: 3.3vh;
+            top: 27%;
             left: 4%;
           }
           .leader-position-photo {
